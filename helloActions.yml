@@ -1,12 +1,12 @@
 # workflow name
-name: Hello world wordflow
+name: Hello world workflow
 
 # events
 on:
   push:
     branches:
       - main
-  pull_requests:
+  pull_request:
     branches:
       - main
   workflow_dispatch:
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: hallo world
+      - name: hello world
         run: echo "Hello World!"
         shell: bash
 
