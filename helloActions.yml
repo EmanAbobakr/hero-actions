@@ -1,0 +1,28 @@
+# workflow name
+name: Hello world wordflow
+
+# events
+on:
+  push:
+    branches:
+      - main
+  pull_requests:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  firstJob:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: hallo world
+        run: echo "Hello World!"
+        shell: bash
+
+  secondJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: goodbye world
+        run: echo "GoodBye World!"
+        shell: bash
