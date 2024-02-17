@@ -22,6 +22,14 @@ jobs:
         shell: bash
 
   secondJob:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello shakira
+        run: echo "Hello Shakire! I wanna try everything!"
+        shell: bash
+
+  thirdJob:
     runs-on: ubuntu-latest
     steps:
       - name: goodbye world
